@@ -3,14 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Message Board</title>
+  <title><%= title %> </title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <div class="container">
     <h1>Mini Message Board</h1>
     <ul>
+        <% messages.forEach((message) => { %>
+            <li>
+                <div>
+                    <strong><%=message.user %>:</strong>
+                    <em><%=message.added.toLocaleString() %></em>
+                    <p><%= message.text %></p>
+                </div>
+            </li>
         
+        <% }) %>
     </ul>
   </div>
 </body>
