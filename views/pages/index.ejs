@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %> </title>
-</head>
+<%- include('../partials/head') %>
 <body>
   <div class="container">
     <h1>Mini Message Board</h1>
@@ -12,7 +6,7 @@
         <% messages.forEach((message) => { %>
             <li>
                 <div>
-                    <strong><%=message.user %>:</strong>
+                    <strong><%=message.user %></strong>
                     <em><%=message.added.toLocaleString() %></em>
                     <p><%= message.text %></p>
                 </div>
@@ -23,4 +17,4 @@
     <a href="/form">Add a new message</a>
   </div>
 </body>
-</html>
+<%- include('../partials/footer') %>
